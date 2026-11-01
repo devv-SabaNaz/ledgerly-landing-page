@@ -1,0 +1,352 @@
+/* CSS Reset */
+* {
+    margin: 0; /*default outer space remove krta hai*/
+    padding: 0; /*default inner space remove krta hai*/
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary: #006D5B; /*main color*/
+    --background: #F8F5EF;
+    --light-green: #DDF3EC;
+    --text: #26332F;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6; /*text ki line k drmyaan space kliye*/
+}
+
+/*container styling*/
+.container {
+    max-width: 1150px; /*content ki max- width*/
+    width: 90%;        /*choti screens k liye*/
+    margin: 0 auto;    /*container center mai lany kliye*/
+}
+
+/* Header */
+.header {
+    padding: 16px 0; /*header k opr or neechy space kliye*/
+}
+
+/* Header Layout */
+.header__container {
+    display: flex; /*logo, nav or button ko ake row mai rkhny kliye*/
+    justify-content: space-between;  /*nav wgera k drmyaan available space ko distribute krta hai*/
+    align-items: center;             /*sb items ko vertically center kliye*/
+    gap: 24px;                       /*elements k drmyaan space kliye*/
+}
+
+/* Logo */
+.header__logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* Navigation List */
+.header__nav-list {
+    display: flex;  
+    align-items: center;
+    gap: 24px;
+    list-style: none;  /*list k bullets ko remove krta hai*/
+}
+
+/* Navigation Links */
+.header__link {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Common Button */
+.btn {
+    display: inline-block;    /*Link ko button ki tarah size aur spacing dene k liye*/
+    padding: 12px 24px;      /*Button ke andar text ke around space dene ke liye*/
+    border-radius: 6px;
+    text-decoration: none;    /*Link ki underline remove karne ke liye*/
+    font-weight: 600;
+}
+
+/* Primary Button */
+.btn--primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Secondary Button */
+.btn--secondary {
+    background-color: var(--light-green);
+    color: var(--text);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 0; /*top aur bottom space ke liye*/
+}
+
+.hero__visual {
+    flex: 1;  /*Image ko hero mein available space degi*/
+    min-width: 0; /*Image ko container se bahar overflow hone se roke gi*/
+}
+
+.hero__image {
+    display: block;  /*Image ke neeche extra inline space remove karegi*/
+    width: 100%;     /*Image ko parent container ki full width degi*/
+    height: auto;    /*	Image ka original ratio maintain rakhegi*/
+    border-radius: 12px;
+}
+
+/* Hero Layout */
+.hero__container {
+    display: flex; /*Text aur dashboard ko side by side rakhne ke liye*/
+    align-items: center; /*dono parts ko vertically center karne ke liye*/
+    justify-content: space-between; /*dono parts ke beech available space ko distribute karne ke liye*/
+    gap: 48px;  /*dono parts ke beech space ke liye*/
+}
+
+/* Hero Content */
+.hero__content {
+    flex: 1; /*Text content ko available space dene ke liye*/
+}
+
+/* Hero Heading */
+.hero__title {
+    font-size: 48px;  /*Text ka size set karne ke liye*/
+    line-height: 1.2; /*Heading ki lines ke darmiyan space ke liye*/
+    margin-bottom: 24px; /*Elements ke neeche space dene ke liye*/
+}
+
+/* Hero Description */
+.hero__description {
+    font-size: 16px;
+    margin-bottom: 24px; /*Elements ke neeche space dene ke liye*/
+}
+
+/* Hero Buttons */
+.hero__actions {
+    display: flex; 
+    flex-wrap: wrap; /*Buttons ko zaroorat par next line mein lane ke liye*/
+    gap: 16px; 
+}
+
+/* Hero Note */
+.hero__note {
+    margin-top: 16px; /*top space dene ke liye*/
+    font-size: 14px;
+}
+
+/* Dashboard Main Box */
+.dashboard {
+    flex: 1; /*Dashboard ko available space dene ke liye*/
+    padding: 24px;  /*Dashboard aur cards ke andar space ke liye*/
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* Dashboard Header */
+.dashboard__header {
+    display: flex;  /*Dashboard header ko flex container banane ke liye*/
+    justify-content: space-between;  /*Children ko space ke sath distribute karne ke liye*/
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Dashboard Summary Cards */
+.dashboard__summary {
+    display: grid;  /*Dashboard summary ko grid container banane ke liye*/
+    grid-template-columns: repeat(2, 1fr);  /*2 columns wala grid banane ke liye*/
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Individual Dashboard Card */
+.dashboard__card {
+    padding: 16px;
+    background-color: var(--light-green);
+    border-radius: 8px;
+}
+
+/* Card Amount */
+.dashboard__card p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Recent Invoices */
+.dashboard__invoices {
+    display: flex;
+    flex-direction: column;  /*Recent invoices ko vertical orientation mein display karne ke liye*/
+    gap: 16px;
+}
+
+/* Individual Invoice */
+.invoice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--background);
+    border-radius: 6px;
+}
+
+
+/* TRUST SECTION */
+.trust {
+    padding: 48px 0;  /*Section ke top aur bottom space ke liye*/
+    text-align: center; /*Heading ko center mein rakhne ke liye*/
+}
+
+/* Trust Heading */
+.trust__heading {
+    font-size: 18px; /*Heading ka size set karne ke liye*/
+    margin-bottom: 24px; /*Elements ke neeche space dene ke liye*/
+}
+
+/* Client Names */
+.trust__list {
+    display: flex; /*Client names ko ek row mein rakhne ke liye*/
+    justify-content: space-between; /*Names ke darmiyan equal available space dene ke liye*/
+    align-items: center;  /*Names ko vertically align karne ke liye*/
+    flex-wrap: wrap;  /*Names ko zaroorat par next line mein lane ke liye*/
+    gap: 24px; /*Names ke beech ka space dene ke liye*/
+}
+
+/* FEATURES SECTION */
+.features {
+    padding: 80px 0; /*Section aur cards ke andar space ke liye*/
+}
+
+/* Common Section Heading */
+.section-heading {
+    text-align: center; /*Heading ko center mein rakhne ke liye*/
+    margin-bottom: 48px; /*heading aur cards ke darmiyan space dene ke liye*/
+}
+
+/* Section Eyebrow */
+.section-heading__eyebrow {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Section Title */
+.section-heading__title {
+    font-size: 32px;
+    margin: 16px 0; /*Title aur description ke beech ka space dene ke liye*/
+}
+
+/* Section Description */
+.section-heading__description {
+    font-size: 16px;
+}
+
+/* Features Grid */
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*Screen ke available space ke according cards adjust karne ke liye*/
+    gap: 24px; /*cards ke beech ka space dene ke liye*/
+}
+
+/* Feature Card */
+.feature-card {
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Feature Icon */
+.feature-card__icon {
+    width: 40px; /*Icon ka width set karne ke liye*/
+    height: 40px; /*icon ka height set karne ke liye*/
+    display: flex; /*Icon ke number ko center karne ke liye*/
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-green);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* Feature Title */
+.feature-card__title {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/* Feature Description */
+.feature-card__description {
+    font-size: 15px;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    padding: 80px 0; /*Section aur cards ke andar space ke liye*/
+    background-color: var(--light-green);
+}
+
+/* Steps Grid */
+.steps__grid {
+    display: grid; /*3 steps ko columns mein arrange karne ke liye*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*Available screen space ke according columns adjust karne ke liye*/
+    gap: 24px; /*Step cards ke darmiyan space ke liye*/
+}
+
+/* Step Card */
+.step-card {
+    padding: 24px; /*Step card ke andar ka space dene ke liye*/
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Step Number */
+.step-card__number {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Step Title */
+.step-card__title {
+    font-size: 20px;
+    margin: 16px 0; /*Step title aur description ke beech ka space dene ke liye*/
+}
+
+/* Step Description */
+.step-card__description {
+    font-size: 15px;
+}
+
+/* FOOTER SECTION */
+.footer {
+    padding: 48px 0; /*Footer ke andar upar aur neeche space*/
+    background-color: white;
+}
+
+.footer__container {
+    display: flex;  /*Footer ke 3 elements ko ek row mein arrange karta hai*/
+    justify-content: space-between;  /*Elements ke darmiyan space rakhta hai*/
+    align-items: center;            /*Elements ko vertically center karta hai*/
+    flex-wrap: wrap;                /*Jagah kam ho to elements next line par aa sakte hain*/
+    gap: 16px;                      /*Elements ke darmiyan gap*/
+}
+
+.footer__logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;        /*Logo ka underline remove karta hai*/
+}
+
+.footer__description {
+    font-size: 14px;
+}
+
+.footer__copyright {
+    font-size: 14px;
+}
